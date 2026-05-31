@@ -67,8 +67,3 @@ Phase 3: Multi-Agent Architecture
 
 Phase 4: Autonomous Test Engineering Platform
 
-## Author
-
-Tirumala Mandati
-
-AI Automation Engineer

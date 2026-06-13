@@ -1,0 +1,99 @@
+Requirement ID: REQ-001  
+Requirement Description: The system shall allow users to log in using a valid username and password.  
+Test Case ID: TC-001  
+Test Case Description: Verify that a user can successfully log in with valid credentials.  
+Priority: High  
+Test Type: Positive Testing  
+Coverage Status: Covered  
+Remarks: This is a critical workflow for system access.  
+.
+
+Requirement ID: REQ-002  
+Requirement Description: The system shall display an error message for invalid login attempts.  
+Test Case ID: TC-002  
+Test Case Description: Check that the system shows an error message when incorrect credentials are entered.  
+Priority: High  
+Test Type: Negative Testing  
+Coverage Status: Covered  
+Remarks: Important for user feedback and security.  
+.
+
+Requirement ID: REQ-003  
+Requirement Description: The system shall enforce a password policy that requires a minimum of 8 characters, including uppercase, lowercase, numeric, and special characters.  
+Test Case ID: TC-003  
+Test Case Description: Validate that the system does not allow passwords shorter than 8 characters or those failing the complexity requirements.  
+Priority: High  
+Test Type: Input Validation  
+Coverage Status: Covered  
+Remarks: Essential for secure user accounts.  
+.
+
+Requirement ID: REQ-004  
+Requirement Description: The system shall implement account lockout after 5 consecutive failed login attempts.  
+Test Case ID: TC-004  
+Test Case Description: Verify that the account is locked after 5 failed login attempts and cannot be logged into until reset.  
+Priority: Medium  
+Test Type: Error Handling  
+Coverage Status: Covered  
+Remarks: Protects against brute force attacks.  
+.
+
+Requirement ID: REQ-005  
+Requirement Description: The system shall provide a session timeout feature that logs out users after 15 minutes of inactivity.  
+Test Case ID: TC-005  
+Test Case Description: Check that the user is logged out automatically after 15 minutes of inactivity.  
+Priority: High  
+Test Type: Session Validation  
+Coverage Status: Covered  
+Remarks: Important for user security and data protection.  
+.
+
+Requirement ID: REQ-006  
+Requirement Description: The system shall validate user input during the login process to prevent SQL injection and cross-site scripting attacks.  
+Test Case ID: TC-006  
+Test Case Description: Conduct penetration testing to ensure that SQL injection and XSS attempts are blocked.  
+Priority: High  
+Test Type: Security Validation  
+Coverage Status: Covered  
+Remarks: Critical for application security.  
+.
+
+Requirement ID: REQ-007  
+Requirement Description: The system shall maintain user session security through secure cookies and token validation.  
+Test Case ID: TC-007  
+Test Case Description: Validate that session cookies are marked secure and HTTP-only and tokens are validated properly on each request.  
+Priority: Medium  
+Test Type: Cookie Security  
+Coverage Status: Covered  
+Remarks: Essential for protecting user sessions.  
+.
+
+Requirement ID: REQ-008  
+Requirement Description: The system shall allow users to reset their passwords securely through a verified email link.  
+Test Case ID: TC-008  
+Test Case Description: Verify that a user can request a password reset and that the reset email contains a verified link.  
+Priority: Medium  
+Test Type: Workflow Validation  
+Coverage Status: Covered  
+Remarks: Necessary for user account recovery.  
+.  
+
+Requirement ID: REQ-009  
+Requirement Description: The system shall ensure role-based access control, allowing different authentication levels based on user roles.  
+Test Case ID: TC-009  
+Test Case Description: Test that users with different roles can only access functionalities appropriate to their roles.  
+Priority: High  
+Test Type: Authorization Validation  
+Coverage Status: Covered  
+Remarks: Essential for security and application integrity.  
+.
+
+Requirement ID: REQ-010  
+Requirement Description: The system shall encrypt passwords in the database using strong encryption algorithms.  
+Test Case ID: TC-010  
+Test Case Description: Review the database to ensure that stored passwords are encrypted and not in plain text.  
+Priority: High  
+Test Type: Data Encryption Validation  
+Coverage Status: Covered  
+Remarks: Critical for user password security.  
+.

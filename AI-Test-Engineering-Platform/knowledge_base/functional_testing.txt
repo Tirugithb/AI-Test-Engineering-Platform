@@ -1,0 +1,14 @@
+Positive Testing
+Negative Testing
+Boundary Value Analysis
+Equivalence Partitioning
+Input Validation
+Field Validation
+Business Rule Validation
+Mandatory Fields
+Optional Fields
+Error Handling
+Data Persistence Validation
+Workflow Validation
+Session Validation
+Role Based Access Validation

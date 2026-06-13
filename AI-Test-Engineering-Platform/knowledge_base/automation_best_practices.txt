@@ -1,0 +1,10 @@
+Use Explicit Waits
+Avoid Thread Sleep
+Use Page Object Model
+Implement Logging
+Use Assertions
+Use Reusable Functions
+Handle Exceptions
+Use Data Driven Testing
+Generate Execution Reports
+Maintain Test Independence

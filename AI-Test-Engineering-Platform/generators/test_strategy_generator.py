@@ -1,0 +1,44 @@
+from llm.openai_client import generate_ai_response
+from utils.advanced_prompt_builder import (
+    build_advanced_prompt
+)
+
+
+def generate_test_strategy(requirement):
+    """
+    Generate AI-powered Test Strategy based on the provided requirement.
+    """
+
+    prompt = build_advanced_prompt(
+        requirement,
+        "Software Test Strategy",
+        """
+Include:
+
+Testing Approach
+
+Test Levels
+
+Test Environment Strategy
+
+Test Data Strategy
+
+Automation Strategy
+
+Risk Management
+
+Success Criteria
+
+Deliverables
+
+Assumptions
+
+Dependencies
+
+Use professional QA documentation format.
+
+Suitable for direct export to TXT.
+"""
+    )
+
+    return generate_ai_response(prompt)

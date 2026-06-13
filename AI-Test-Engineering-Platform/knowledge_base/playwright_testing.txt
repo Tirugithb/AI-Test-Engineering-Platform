@@ -1,0 +1,15 @@
+Web Automation Testing
+
+Cross Browser Validation
+
+API Validation
+
+UI Validation
+
+Functional Validation
+
+Parallel Execution Validation
+
+Reporting Validation
+
+Network Validation

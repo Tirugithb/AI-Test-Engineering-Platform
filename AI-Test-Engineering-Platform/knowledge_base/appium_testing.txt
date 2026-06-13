@@ -1,0 +1,31 @@
+Mobile Application Testing
+
+Android Testing
+
+iOS Testing
+
+Device Connection Validation
+
+Application Launch Validation
+
+Element Identification Validation
+
+Synchronization Validation
+
+Gesture Validation
+
+Swipe Validation
+
+Scroll Validation
+
+Wait Handling Validation
+
+Device Compatibility Validation
+
+App Installation Validation
+
+App Upgrade Validation
+
+Error Handling Validation
+
+Reporting Validation

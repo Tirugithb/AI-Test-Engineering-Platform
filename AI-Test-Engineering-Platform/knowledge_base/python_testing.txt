@@ -1,0 +1,13 @@
+Code Validation
+
+Unit Testing
+
+Integration Testing
+
+Exception Handling Validation
+
+Logging Validation
+
+Framework Validation
+
+Performance Validation

@@ -1,0 +1,19 @@
+Web Application Testing
+
+Browser Compatibility Validation
+
+Cross Browser Validation
+
+UI Validation
+
+Functional Validation
+
+Form Validation
+
+Navigation Validation
+
+Synchronization Validation
+
+Wait Handling Validation
+
+Reporting Validation

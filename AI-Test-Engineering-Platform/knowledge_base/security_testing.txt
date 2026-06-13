@@ -1,0 +1,10 @@
+SQL Injection
+Cross Site Scripting
+Session Timeout
+Authentication Validation
+Authorization Validation
+Password Policy Validation
+Account Lockout
+Cookie Security
+Token Validation
+Data Encryption Validation

@@ -1,0 +1,14 @@
+Defect ID: 001  
+Summary: Unable to log in with valid credentials.  
+Description: When a user attempts to log in with valid credentials, the system unexpectedly displays an error message indicating that the username or password is incorrect. This issue affects the user experience and prevents access to account functionalities.  
+Severity: High  
+Priority: Critical  
+Steps to Reproduce:  
+1. Navigate to the login page of the application.  
+2. Enter a valid username in the username field.  
+3. Enter a valid password in the password field.  
+4. Click the "Login" button.  
+5. Observe the system’s response.  
+Expected Result: The user should be successfully logged in and redirected to their account dashboard.  
+Actual Result: The system displays an error message stating that the username or password is incorrect, and the user is unable to log in.  
+Status: Open  

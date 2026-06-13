@@ -1,0 +1,89 @@
+TC ID: TC001  
+Module: User Login  
+Test Case Description: Verify that a user can successfully log in with valid credentials.  
+Preconditions: User must have a registered account.  
+Test Steps: 1. Navigate to the login page. 2. Enter valid username. 3. Enter valid password. 4. Click on the 'Login' button.  
+Expected Result: User is successfully logged in and redirected to the dashboard.  
+Priority: High  
+Test Type: Positive Testing  
+
+TC ID: TC002  
+Module: User Login  
+Test Case Description: Verify that the system displays an error message for incorrect username.  
+Preconditions: User must not have an account with the provided username.  
+Test Steps: 1. Navigate to the login page. 2. Enter an invalid username. 3. Enter a valid password. 4. Click on the 'Login' button.  
+Expected Result: An error message indicating incorrect username is displayed.  
+Priority: High  
+Test Type: Negative Testing  
+
+TC ID: TC003  
+Module: User Login  
+Test Case Description: Verify that the system displays an error message for incorrect password.  
+Preconditions: User must have a registered account with a known password.  
+Test Steps: 1. Navigate to the login page. 2. Enter valid username. 3. Enter an incorrect password. 4. Click on the 'Login' button.  
+Expected Result: An error message indicating incorrect password is displayed.  
+Priority: High  
+Test Type: Negative Testing  
+
+TC ID: TC004  
+Module: User Registration  
+Test Case Description: Validate mandatory fields during user registration.  
+Preconditions: User is on the registration page.  
+Test Steps: 1. Leave all mandatory fields empty. 2. Click on the 'Register' button.  
+Expected Result: Error messages for all mandatory fields are displayed.  
+Priority: High  
+Test Type: Input Validation  
+
+TC ID: TC005  
+Module: User Registration  
+Test Case Description: Validate email format during user registration.  
+Preconditions: User is on the registration page.  
+Test Steps: 1. Fill in mandatory fields. 2. Enter an invalid email format. 3. Click on the 'Register' button.  
+Expected Result: An error message indicating an invalid email format is displayed.  
+Priority: Medium  
+Test Type: Field Validation  
+
+TC ID: TC006  
+Module: Data Persistence  
+Test Case Description: Verify that user data is stored correctly in the database after registration.  
+Preconditions: User must complete the registration process successfully.  
+Test Steps: 1. Register a new user with valid information. 2. Access the database directly.  
+Expected Result: User's information is accurately reflected in the database.  
+Priority: High  
+Test Type: Data Persistence Validation  
+
+TC ID: TC007  
+Module: User Roles  
+Test Case Description: Validate role-based access control for a normal user.  
+Preconditions: User is logged in as a normal user.  
+Test Steps: 1. Attempt to access admin-only pages.  
+Expected Result: Access is denied with an appropriate error message.  
+Priority: High  
+Test Type: Role Based Access Validation  
+
+TC ID: TC008  
+Module: Workflow Management  
+Test Case Description: Verify the workflow for approving user-generated content.  
+Preconditions: User has submitted content for approval.  
+Test Steps: 1. Login as an admin user. 2. Navigate to the approval dashboard. 3. Approve submitted content.  
+Expected Result: The content status changes to approved.  
+Priority: Medium  
+Test Type: Workflow Validation  
+
+TC ID: TC009  
+Module: Security  
+Test Case Description: Test the application for SQL Injection vulnerabilities during login.  
+Preconditions: User is on the login page.  
+Test Steps: 1. Enter SQL injection code in the username field. 2. Enter a random password. 3. Click 'Login'.  
+Expected Result: The application does not execute the injection and displays an error message.  
+Priority: High  
+Test Type: Security Testing  
+
+TC ID: TC010  
+Module: Application Performance  
+Test Case Description: Measure response time under load when multiple users log in simultaneously.  
+Preconditions: Load testing tools configured to simulate multiple users.  
+Test Steps: 1. Simulate 100 users attempting to log in at the same time.  
+Expected Result: The application responds within acceptable time limits (e.g., less than 2 seconds).  
+Priority: High  
+Test Type: Performance Testing  

@@ -1,0 +1,7 @@
+Policy Creation
+Claim Processing
+Premium Calculation
+Coverage Validation
+Policy Renewal
+Claim Approval
+Claim Rejection

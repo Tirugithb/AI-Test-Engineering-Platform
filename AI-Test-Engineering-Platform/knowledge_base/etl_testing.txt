@@ -1,0 +1,7 @@
+Source To Target Validation
+Data Completeness Validation
+Data Accuracy Validation
+Transformation Validation
+Duplicate Record Validation
+Null Value Validation
+Data Reconciliation

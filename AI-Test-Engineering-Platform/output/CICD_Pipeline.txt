@@ -1,0 +1,102 @@
+pipeline {
+    agent any 
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building the Selenium Framework project...'
+                // build steps
+            }
+        }
+
+        stage('Test Execution') {
+            steps {
+                echo 'Executing tests for Patient Registration and Patient Information Validation...'
+                script {
+                    try {
+                        // Execute positive and negative tests for various patient workflows
+                        executePatientRegistrationTests()
+                        executePatientInformationTests()
+                        executeAppointmentTests()
+                        executeProviderValidationTests()
+                        executePrescriptionValidationTests()
+                        // Add additional test execution as required
+                    } catch (Exception e) {
+                        echo "Test execution failed: ${e.getMessage()}"
+                        currentBuild.result = 'FAILURE'
+                    }
+                }
+            }
+        }
+
+        stage('Report Publishing') {
+            steps {
+                echo 'Publishing test execution reports...'
+                publishExecutionReports()
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Cleaning up...'
+            // Clean up for resources
+        }
+        
+        success {
+            echo 'All stages completed successfully!'
+        }
+        
+        failure {
+            echo 'Some stages failed. Please check the logs.'
+        }
+    }
+}
+
+def executePatientRegistrationTests() {
+    // Implement tests for Patient Registration Validation
+    echo 'Running Patient Registration Validations...'
+    // Call reusable function to run validation checks
+    runValidation("Patient Registration")
+}
+
+def executePatientInformationTests() {
+    // Implement tests for Patient Information Validation
+    echo 'Running Patient Information Validations...'
+    runValidation("Patient Information")
+}
+
+def executeAppointmentTests() {
+    // Implement tests for Appointment workflows
+    echo 'Running Appointment Scheduling Validations...'
+    runValidation("Appointment Scheduling")
+}
+
+def executeProviderValidationTests() {
+    // Implement tests for Provider Information Validation
+    echo 'Running Provider Information Validations...'
+    runValidation("Provider Information")
+}
+
+def executePrescriptionValidationTests() {
+    // Implement tests for Prescription Validation
+    echo 'Running Prescription Validations...'
+    runValidation("Prescription")
+}
+
+def runValidation(validationType) {
+    // Implementation of reusable function for running validations
+    // Add specific Selenium test logic based on validationType
+    // Use Explicit Waits, Handle Exceptions, Implement Logging, and Assertions
+}
+
+def publishExecutionReports() {
+    // Implement report generation logic, including execution logs and summaries
+    echo 'Generating and publishing reports for executed tests...'
+}

@@ -1,12 +1,52 @@
-# TestGen AI
+# 🤖 TestGen AI
 
 ## AI-Powered Multi-Agent Test Engineering Platform
 
-## Overview
+---
+
+# 🚀 Overview
 
 **TestGen AI** is an AI-powered Multi-Agent Test Engineering Platform that transforms natural language requirements into software engineering artifacts. The platform intelligently classifies user requests and routes them to specialized AI agents to generate high-quality deliverables for QA, Automation, API Testing, Database Design, Architecture, DevOps, Code Generation, and Document Analysis.
 
-The objective of TestGen AI is to accelerate software delivery by reducing manual effort in test engineering and documentation while improving consistency and productivity.
+The objective of **TestGen AI** is to accelerate software delivery by reducing manual effort in test engineering and documentation while improving consistency, productivity, and software quality.
+
+---
+
+# 🏗️ Architecture
+
+```
+                    User Requirement
+                           │
+                           ▼
+                 Artifact Classifier
+                           │
+                           ▼
+                  Orchestrator Agent
+                           │
+      ┌──────────┬─────────┼──────────┬─────────┐
+      │          │         │          │
+      ▼          ▼         ▼          ▼
+Requirement    QA       API      Automation
+   Agent      Agent    Agent        Agent
+      │
+      ├──────────────┬──────────────┐
+      │              │              │
+      ▼              ▼              ▼
+ Database      Architecture     DevOps
+   Agent           Agent          Agent
+      │
+      ├──────────────┬──────────────┐
+      │              │
+      ▼              ▼
+Code Generation   Document
+      Agent         Agent
+           │
+           ▼
+        AI Model (LLM)
+           │
+           ▼
+    Generated Artifact
+
 
 
 # Key Features
@@ -51,6 +91,7 @@ TestGen AI consists of multiple specialized AI agents coordinated by an intellig
 * LLM Integration
 * Document Processing Engine
 
+---
 
 # Technology Stack
 
@@ -62,7 +103,7 @@ TestGen AI consists of multiple specialized AI agents coordinated by an intellig
 
 * Streamlit
 
-## AI
+## Artificial Intelligence
 
 * Google Gemini
 * Prompt Engineering
@@ -79,18 +120,68 @@ TestGen AI consists of multiple specialized AI agents coordinated by an intellig
 * GitHub
 
 
+
+# Installation
+
+## Prerequisites
+
+Make sure the following are installed:
+
+* Python 3.10 or above
+* Git
+* pip
+
+
+## Clone the Repository
+
+bash
+git clone https://github.com/<your-github-username>/TestGen-AI.git
+
+
+
+## Navigate to the Project
+
+bash
+cd TestGen-AI
+
+
+## Install Dependencies
+
+bash
+pip install -r requirements.txt
+
+
+## Run the Application
+
+bash
+streamlit run app.py
+
+
+## Access the Application
+
+Open your browser and navigate to:
+
+http://localhost:8501
+
+
+You can now start generating software engineering artifacts using natural language prompts.
+
+
 # Project Structure
 
 TestGen-AI/
 
 │── agents/
-│── ui/
-│── utils/
 │── prompts/
+│── utils/
+│── ui/
 │── docs/
 │── architecture/
 │── prototype/
 │── roadmap/
+│── tests/
+│── screenshots/
+│── logs/
 │── requirements.txt
 │── README.md
 │── LICENSE
@@ -98,43 +189,60 @@ TestGen-AI/
 
 # Example Prompts
 
-### Requirement Engineering
+## Requirement Engineering
 
 * Generate BRD for Hospital Management System
 
-### QA
+## QA
 
 * Generate Test Cases for Login Screen
 
-### API
+## API
 
 * Generate API Test Cases for Login API
 
-### Automation
+## Automation
 
 * Generate Selenium Automation Script for Login Page
 
-### Database
+## Database
 
 * Generate ER Diagram for Banking System
 
-### Architecture
+## Architecture
 
 * Generate Microservices Architecture for E-commerce
 
-### DevOps
+## DevOps
 
 * Generate Dockerfile for FastAPI Application
 
-### Code Generation
+## Code Generation
 
 * Generate Python Singleton Design Pattern
 
-### Document Analysis
+## Document Analysis
 
 * Summarize the uploaded document
 
 * Extract functional requirements from the uploaded document
+
+
+# Supported Artifacts
+
+| Artifact                          | Supported |
+| --------------------------------- | --------- |
+| BRD                               | ✅         |
+| Test Cases                        | ✅         |
+| API Test Cases                    | ✅         |
+| Selenium Automation Scripts       | ✅         |
+| SQL Queries                       | ✅         |
+| ER Diagrams                       | ✅         |
+| Architecture Documents            | ✅         |
+| DevOps Artifacts                  | ✅         |
+| Code Generation                   | ✅         |
+| Document Summary                  | ✅         |
+| Functional Requirement Extraction | ✅         |
 
 
 # Regression Testing
@@ -160,6 +268,19 @@ The platform has been validated through regression testing covering all supporte
 * **Failed:** 0
 * **Pass Percentage:** **100%**
 
+---
+
+# Project Highlights
+
+* Multi-Agent AI Architecture
+* Intelligent Artifact Classification
+* Dynamic Agent Routing
+* Streamlit-Based Interactive UI
+* Document Processing Capability
+* Response Time Tracking
+* Regression Tested
+* 10/10 Test Cases Passed
+
 
 # Future Roadmap
 
@@ -167,11 +288,12 @@ The platform has been validated through regression testing covering all supporte
 
 * Professional GitHub Documentation
 * Architecture Diagram
-* UI Improvements
+* UI Enhancements
 
 ## Phase 2
 
-* PDF/DOCX Export
+* PDF Export
+* DOCX Export
 * Enhanced Logging
 * Analytics Dashboard
 
@@ -187,6 +309,7 @@ The platform has been validated through regression testing covering all supporte
 * Advanced Knowledge Base
 * Autonomous Test Engineering Assistant
 
+---
 
 # License
 
@@ -195,4 +318,4 @@ This project is licensed under the MIT License.
 
 # Vision
 
-**"Empowering Software Quality Engineering through Multi-Agent Generative AI."**
+> **Accelerating Software Quality Engineering through Intelligent Multi-Agent AI Automation.**

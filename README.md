@@ -10,44 +10,89 @@
 
 The objective of **TestGen AI** is to accelerate software delivery by reducing manual effort in test engineering and documentation while improving consistency, productivity, and software quality.
 
----
 
-# 🏗️ Architecture
+# Architecture
 
-```
-                    User Requirement
-                           │
-                           ▼
-                 Artifact Classifier
-                           │
-                           ▼
-                  Orchestrator Agent
-                           │
-      ┌──────────┬─────────┼──────────┬─────────┐
-      │          │         │          │
-      ▼          ▼         ▼          ▼
-Requirement    QA       API      Automation
-   Agent      Agent    Agent        Agent
-      │
-      ├──────────────┬──────────────┐
-      │              │              │
-      ▼              ▼              ▼
- Database      Architecture     DevOps
-   Agent           Agent          Agent
-      │
-      ├──────────────┬──────────────┐
-      │              │
-      ▼              ▼
-Code Generation   Document
-      Agent         Agent
-           │
-           ▼
-        AI Model (LLM)
-           │
-           ▼
-    Generated Artifact
+# TestGen AI - Multi-Agent Architecture
+
+                                    👤 USER
+                                       │
+                                       ▼
+        ┌──────────────────────────────────────────────────┐
+        │          🤖 TestGen AI (Streamlit UI)           │
+        │  • Prompt Input                                 │
+        │  • File Upload                                  │
+        │  • Chat Interface                               │
+        └──────────────────────────────────────────────────┘
+                                       │
+                                       ▼
+        ┌──────────────────────────────────────────────────┐
+        │             🧠 Artifact Classifier              │
+        │     Detects Request Type / Artifact Type        │
+        └──────────────────────────────────────────────────┘
+                                       │
+                                       ▼
+        ┌──────────────────────────────────────────────────┐
+        │              🎯 Orchestrator Agent              │
+        │   Selects and Invokes the Appropriate Agent     │
+        └──────────────────────────────────────────────────┘
+                                       │
+        ───────────────────────────────┼──────────────────────────────
+                                       │
+      ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐
+      │Requirement│ │   QA     │ │   API    │ │Automation│ │ Database │
+      │   Agent   │ │  Agent   │ │  Agent   │ │  Agent   │ │  Agent   │
+      └──────────┘ └──────────┘ └──────────┘ └──────────┘ └──────────┘
+
+      ┌──────────┐ ┌──────────┐ ┌────────────────┐ ┌──────────┐
+      │Architecture││ DevOps  │ │Code Generation│ │ Document │
+      │   Agent    ││  Agent  │ │     Agent      │ │  Agent   │
+      └──────────┘ └──────────┘ └────────────────┘ └──────────┘
+                                       │
+                                       │
+                     (Only the Selected Agent Executes)
+                                       │
+                                       ▼
+        ┌──────────────────────────────────────────────────┐
+        │          📝 Prompt Engineering Layer             │
+        │  Builds Specialized Prompt for Selected Agent    │
+        └──────────────────────────────────────────────────┘
+                                       │
+                                       ▼
+        ┌──────────────────────────────────────────────────┐
+        │             🔷 Google Gemini LLM                │
+        │      AI Processing & Content Generation          │
+        └──────────────────────────────────────────────────┘
+                                       │
+                                       ▼
+        ┌──────────────────────────────────────────────────┐
+        │              📦 Generated Artifact              │
+        │ BRD │ Test Cases │ SQL │ DevOps │ Code │ Docs   │
+        └──────────────────────────────────────────────────┘
+                                       │
+                                       ▼
+        ┌──────────────────────────────────────────────────┐
+        │           🖥️ Streamlit Response UI              │
+        │  • Result Display                               │
+        │  • Response Time                                │
+        │  • Metrics                                      │
+        │  • Chat History                                 │
+        └──────────────────────────────────────────────────┘
+                                       │
+                                       ▼
+                                    👤 USER
 
 
+**This architecture is accurate because**
+* User submits a prompt.
+* Streamlit UI collects the prompt and optional uploaded document.
+* Artifact Classifier determines the artifact type (qa, devops, database_sql, architecture, etc.).
+* Orchestrator Agent routes the request.
+* Only one specialized agent executes for that request.
+* That agent performs prompt engineering and prepares the final prompt.*
+* The prompt is sent to Google Gemini.
+* Gemini generates the artifact.
+* The result is returned to the Streamlit UI, which displays the output and metrics to the user.
 
 # Key Features
 
